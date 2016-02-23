@@ -1,0 +1,8 @@
+body{
+	margin:8px;
+}
+
+.invalidWarn{
+	color:red;
+	font-size:small;
+}
