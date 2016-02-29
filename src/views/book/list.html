@@ -13,11 +13,11 @@
 			<td>{{item.author}}</td>
 			<td>{{item.price|currency:'￥'}}</td>
 			<td>
-				<a class="btn btn-default col-sm-6" ng-click="go2Edit(item)">修改</a>
+				<a class="btn btn-default col-sm-6" ng-click="go2AddOrEdit(item)">修改</a>
 				<a class="btn btn-warning col-sm-6" ng-click="delBook(item)">删除</a>
 			</td>
 		</tr>
 	</table>
 	<br><br>
-	<a class="btn btn-primary col-sm-12" ui-sref="addOrEdit">我要添加</a>
+	<a class="btn btn-primary col-sm-12" ng-click="go2AddOrEdit()">我要添加</a>
 </div>

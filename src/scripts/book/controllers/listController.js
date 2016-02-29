@@ -5,7 +5,7 @@ angular.module('main',[])
 
 		$scope.delBook = bookInfoService.delBook;
 
-		$scope.go2Edit = function(item){
-			$state.go('addOrEdit',{data:item});
+		$scope.go2AddOrEdit = function(item){
+			$state.go('main.addOrEdit',{data:item});
 		}
 	}]);

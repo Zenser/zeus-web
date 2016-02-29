@@ -7,9 +7,13 @@ angular.module('demo',[
 	])
 	.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 		$stateProvider
-			.state('list',{
+			.state('main',{
+				url:'/main',
+				templateUrl:'views/main.html'
+			})
+			.state('main.list',{
 				url:'/list',
-				templateUrl:'views/list.html',
+				templateUrl:'views/book/list.html',
 				controller:'listController'
 				//views:{
 				//	'':{
@@ -18,9 +22,9 @@ angular.module('demo',[
 				//	}
 				//}
 			})
-			.state('addOrEdit',{
+			.state('main.addOrEdit',{
 				url:'/addOrEdit',
-				templateUrl:'views/addOrEdit.html',
+				templateUrl:'views/book/addOrEdit.html',
 				controller:'addOrEditController',
 				params:{
 					data:null
@@ -28,8 +32,7 @@ angular.module('demo',[
 			});
 
 		$urlRouterProvider
-			.when('/main','/main/list')
-			.otherwise('/list');
+			.otherwise('/main');
 
 	}])
 	.run(['$rootScope','localBookInfoFactory',function($rootScope,localBookInfoFactory){

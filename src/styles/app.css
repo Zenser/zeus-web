@@ -1,7 +1,6 @@
-body{
-	margin:8px;
+.navbar{
+	border-radius:0;
 }
-
 .invalidWarn{
 	color:red;
 	font-size:small;
