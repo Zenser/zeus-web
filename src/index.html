@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html ng-app="demo">
+<!doctype html>
+<html ng-app="zeus">
 <head>
-	<meta charset="UTF-8">
-	<title>angular增删查改</title>
-	<script src="../bower_components/angular/angular.js"></script>
-	<script src="../bower_components/ngstorage/ngStorage.js"></script>
-	<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script src="../bower_components/jquery/dist/jquery.js"></script>
-	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" href="styles/app.css">
+    <meta charset="utf-8">
+    <title>zeus</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- bower:css -->
+    <!-- bower installed css files will go here... -->
+    <!-- endinject -->
+    <!-- inject:css -->
+    <!-- built css files will go here... -->
+    <!-- endinject -->
 </head>
 <body>
-<div ui-view></div>
-<script src="scripts/app.js"></script>
-<script src="scripts/book/controllers/listController.js"></script>
-<script src="scripts/book/controllers/addOrEditController.js"></script>
-<script src="scripts/book/services/bookInfoService.js"></script>
-<script src="scripts/book/services/localBookInfoService.js"></script>
-
+    <!-- bower:js -->
+    <!-- bower installed scripts will go here... -->
+    <!-- endinject -->
+    <!-- inject:js -->
+    <!-- app scripts will go here... -->
+    <!-- endinject -->
+    <ui-view></ui-view>
 </body>
 </html>

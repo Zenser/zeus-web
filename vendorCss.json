@@ -1,0 +1,5 @@
+[
+  "bower_components/bootstrap/dist/css/bootstrap.min.css",
+  "bower_components/angular-toastr/dist/angualr-toastr.min.css",
+  "bower_components/sweetalert/dist/sweetalert.css"
+]

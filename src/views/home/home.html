@@ -1,3 +1,12 @@
-<div>
+<div class="jumbotron home">
+    <img class="monkey" src="images/monkey.png" alt="monkey">
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
 
+    <div class="list-group" ng-repeat="item in articles track by $index"
+         ng-mouseover="mouseOverArticle = true" ng-mouseleave="mouseOverArticle = false">
+        <a href="" class="list-group-item" ng-class="active:mouseOverArticle">
+            <h4 class="list-group-item-heading">{{item.title}}g</h4>
+            <p class="list-group-item-text">{{item.content}}</p>
+        </a>
+    </div>
 </div>

@@ -1,0 +1,10 @@
+[
+  "bower_components/jquery/dist/jqurey.min.js",
+  "bower_components/angular/angular.min.js",
+  "bower_components/angular-animate/angular-animate.min.js",
+  "bower_components/angular-ui-router/release/angular-ui-router.min.js",
+  "bower_components/sweetalert/dist/sweetalert.min.js",
+  "bower_components/ngSweetAlert/SweetAlert.min.js",
+  "bower_components/angular-toastr/dist/angular-toastr.min.js",
+  "bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"
+]

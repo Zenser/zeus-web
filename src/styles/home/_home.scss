@@ -1,0 +1,16 @@
+.home {
+  background-color: $primary-color;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  .monkey {
+    max-width: 180px;
+  }
+  .list-group {
+    text-align: left;
+    .list-group-item-text {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
+}

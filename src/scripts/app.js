@@ -1,48 +1,24 @@
 /**
-*页面入口
-*/
-angular.module('demo',[
-	'ui.router',
-	'main'
-	])
-	.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
-		$stateProvider
-			.state('main',{
-				url:'/main',
-				templateUrl:'views/main.html'
-			})
-			.state('main.list',{
-				url:'/list',
-				templateUrl:'views/book/list.html',
-				controller:'listController'
-				//views:{
-				//	'':{
-				//		templateUrl:'views/list.html',
-				//		controller:'listController'
-				//	}
-				//}
-			})
-			.state('main.addOrEdit',{
-				url:'/addOrEdit',
-				templateUrl:'views/book/addOrEdit.html',
-				controller:'addOrEditController',
-				params:{
-					data:null
-				}
-			});
+ *页面入口
+ */
+angular.module('zeus', [
+        'ui.router',
+        'oitozero.ngSweetAlert'
+    ])
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('main', {
+                url: '/main',
+                abstract: true,
+                templateUrl: 'main.html'
+            })
+            .state('main.home', {
+                url: '/home',
+                templateUrl: 'home/home.html',
+                controller: 'homeController'
+            });
 
-		$urlRouterProvider
-			.otherwise('/main');
+        $urlRouterProvider
+            .otherwise('/main/home');
 
-	}])
-	.run(['$rootScope','localBookInfoFactory',function($rootScope,localBookInfoFactory){
-		localBookInfoFactory.getLocalBookInfo().then(function(data){
-			        console.log(data);
-			        $rootScope.bookInfo = {};
-					data.data.forEach(function(item){
-						$rootScope.bookInfo[item.bookId]=item;
-					});
-			    },function(msg){
-			        cosole.log(msg);
-			    });
-	}]);
+    }]);
