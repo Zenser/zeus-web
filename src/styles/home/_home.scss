@@ -1,5 +1,5 @@
+@charset "UTF-8";
 .home {
-  background-color: $primary-color;
   width: 80%;
   margin: 0 auto;
   text-align: center;
@@ -10,7 +10,15 @@
     text-align: left;
     .list-group-item-text {
       white-space: pre-wrap;
-      word-wrap: break-word;
+      font-size: 16px;
+      line-height: 1.4em;
+      height: 4.2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      //webkit超过3行显示省略号
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
     }
   }
 }

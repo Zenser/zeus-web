@@ -3,7 +3,9 @@
  */
 angular.module('zeus', [
         'ui.router',
-        'oitozero.ngSweetAlert'
+        'ngAnimate',
+        'oitozero.ngSweetAlert',
+        'zeus.article'
     ])
     .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $stateProvider
