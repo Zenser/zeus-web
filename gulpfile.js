@@ -98,7 +98,7 @@ gulp.task('watch', function () {
     gulp.watch('src/styles/**/*.scss', ['sass']);
     gulp.watch('src/scripts/**/*.js', ['jsCopy']);
     gulp.watch('src/images/**/*', ['imageMin']);
-    gulp.watch(['src/index.html', 'vendor.json'], ['inject']);
+    gulp.watch(['src/index.html', 'vendor.json', 'vendorCss.json'], ['inject']);
     gulp.watch('src/**')
         .on('change', liveReload.changed);
 });
